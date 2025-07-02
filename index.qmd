@@ -1,0 +1,249 @@
+---
+title: "Quarto: Open-source scientific and technical publishing system"
+subtitle: "Anwendungsbeispiele für das ZfL"
+format: html
+lang: de
+date: today
+license: "CC BY-SA"
+theme: cerulean
+toc: true
+embed-resources: false
+title-block-banner: true
+published-title: Letzte Aktualisierung
+author:
+  name: Pawel R. Kulawiak
+  orcid: 0000-0001-5939-4380
+  email: kulawiak.pawel@uni-koeln.de
+  url: https://pawelkulawiak.github.io/site/
+  affiliations:
+    name: Universität zu Köln, Graduiertenschule für LehrerInnenbildung
+    url: https://zfl.uni-koeln.de/graduiertenschule/die-graduiertenschule-auf-einen-blick/team
+---
+
+```{=html}
+<style>
+/* Add R logo to the title banner */
+#title-block-header.quarto-title-block.default .quarto-title::before {
+  content: '';
+  display: block;
+  background-image: url('./logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 20px;
+}
+</style>
+```
+
+# Was ist quarto?
+
+::: {.callout-note appearance="simple"}
+Quarto ist ein open-source wissenschaftliches und technisches Publishing-System, das von Posit (ehemals RStudio) entwickelt wurde. Es ermöglicht die Erstellung von Dokumenten, Präsentationen, Websites, Blogs und Büchern in verschiedenen Ausgabeformaten.
+
+<https://quarto.org/>
+:::
+
+# Beispiele
+
+::: {.callout-note appearance="simple"}
+1. <https://bookdown.org/boehm_kasper/Tutorial_Mit_Emma_durch_den_Datenschungel/>
+2. <https://pawelkulawiak.github.io/rworkshop/>
+2. <https://pawelkulawiak.github.io/3in1/>
+3. <https://pawelkulawiak.github.io/>
+4. <https://kulawiak.shinyapps.io/demoapp/>
+5. <https://kulawiak.shinyapps.io/soznetz/>
+:::
+
+# Wir starten RStudio
+
+::: {.callout-note appearance="simple"}
+{{< video https://www.youtube.com/embed/OlvO-EG-P60?si=Wcu7xNPSvAKRlFhy >}}
+:::
+
+# YAML Header
+
+::: {.callout-note appearance="simple"}
+
+Ein YAML-Header ist ein spezieller Abschnitt am Anfang eines Quarto-Dokuments. Hier können diverse Einstellungen und Meta-Daten für das Dokument festgelegt werden, z.B.:
+
+- Titel (title)
+- Untertitel (subtitle)
+- Autor (author)
+- Datum (date)
+- Format (format)
+- Design (theme)
+- Stil des Dokuments (title-block-banner)
+- Sprache (lang)
+- Lizenz (license)
+
+<https://quarto.org/docs/authoring/front-matter.html>
+
+---
+
+```{}
+---
+title: "Meine Seite"
+subtitle: "Der erste Versuch"
+author: "Pawel"
+lang: de
+format: html
+theme: cerulean
+title-block-banner: true
+date: today
+license: "CC BY-SA"
+---
+```
+:::
+
+# Markdown
+
+::: {.callout-note appearance="simple"}
+```{}
+Markdown ist eine einfache Auszeichnungssprache (markup language),
+die leicht zu lesen und zu schreiben ist.
+
+Das ist *kursiv*. Das ist **fett**. Das ist ***fett-kursiv***.
+
+Das ist eine Liste:
+
+- Hi
+- Hallo
+- Grüß Gott
+```
+
+---
+
+Markdown ist eine einfache Auszeichnungssprache (markup language), die leicht zu lesen und zu schreiben ist.
+
+Das ist *kursiv*. Das ist **fett**. Das ist ***fett-kursiv***.
+
+Das ist eine Liste:
+
+- Hi
+- Hallo
+- Grüß Gott
+
+---
+
+##### Übung
+
+Schreiben Sie 3 kurze Absätze mit Markdown und benutzen innerhalb des Fließtextes *kursiv*, **fett** und ***fett-kursiv***. Wählen Sie passende Überschriften für die 3 Absätze:
+
+1. Absatz: Überschrift erster Ebene
+2. Absatz: Überschrift zweiter Ebene
+3. Absatz: Überschrift zweiter Ebene
+
+Wie erstelle ich Überschriften? Bitte hier recherchieren:
+
+- <https://quarto.org/docs/authoring/markdown-basics.html>
+- <https://www.markdownguide.org/cheat-sheet/>
+:::
+
+# Videos
+
+::: {.callout-note appearance="simple"}
+
+> &#123;&#123;< video https://youtu.be/vG8dQ_OC70U?si=VMQhEb4rBOE8C7XQ >&#125;&#125;
+
+<https://quarto.org/docs/authoring/videos.html>
+
+---
+
+{{< video https://youtu.be/vG8dQ_OC70U?si=VMQhEb4rBOE8C7XQ >}}
+:::
+
+# Bilder
+
+::: {.callout-note appearance="simple"}
+
+```{}
+![Das Team der Graduiertenschule für Lehrer:innenbildung](GSLB_TEAM.jpg)
+```
+
+<https://quarto.org/docs/authoring/figures.html>
+
+---
+
+![Das Team der Graduiertenschule für Lehrer:innenbildung (Til, Chiara, Eva, Maike, Pawel)](GSLB_TEAM.jpg)
+:::
+
+# Links
+
+::: {.callout-note appearance="simple"}
+```{}
+Hier ist der Link zum Zentrum für Lehrer:innenbildung (ZfL): <https://zfl.uni-koeln.de/>
+
+Die [Graduiertenschule für LehrerInnenbildung](https://zfl.uni-koeln.de/graduiertenschule) ist ...
+
+Ein Bild mit Link:
+
+[!["Klick mich an!"](GSLB_TEAM.jpg)](https://zfl.uni-koeln.de/graduiertenschule)
+```
+
+<https://quarto.org/docs/authoring/markdown-basics.html#links-images>
+---
+
+Hier ist der Link zum Zentrum für Lehrer:innenbildung (ZfL): <https://zfl.uni-koeln.de/>
+
+Die [Graduiertenschule für LehrerInnenbildung](https://zfl.uni-koeln.de/graduiertenschule) ist eine fakultätsübergreifende Einrichtung zur Gewinnung, Förderung und Professionalisierung der nächsten Generation Wissenschaftler:innen, die im Bereich der Schul-, Unterrichts- und Professionsforschung tätig sind.
+
+Ein Bild mit Link:
+
+[!["Klick mich an!"](GSLB_TEAM.jpg)](https://zfl.uni-koeln.de/graduiertenschule)
+:::
+
+# Übung
+
+::: {.callout-note appearance="simple"}
+
+Erstellen Sie einen kurzen Beitrag zum Thema Katzen.
+
+- Der Beitrag soll auf den Wikipedia-Artikel „Katzen“ verweisen (Verlinkung).
+- Erstellen Sie eine Liste mit 3 Katzenarten (z.B. Tiger, Puma, Luchs). Die Listeneinträge sind zugleich Wikipedia-Links zu den entsprechenden Katzenarten.
+- Betten Sie ein entsprechendes Video einer Katzenart ein.
+- Der Beitrag soll eine Bild einer Katze beinhalten. Dieses Bild führt zum entsprechenden Wikipedia-Artikel.
+
+:::
+
+# Interaktivität mit R
+
+::: {.callout-note appearance="simple"}
+
+```{r}
+#| echo: false
+library(leaflet)
+
+leaflet() |>
+  addTiles() |>
+  addMarkers(lng=6.91895, lat=50.9299) |>
+  addPopups(lng=6.91895, lat=50.9304,
+  popup="Zentrum für Lehrer*innenbildung (ZfL), Besuchsadresse: Immermannstraße 49, 50931 Köln")
+```
+
+```{r}
+#| eval: false
+library(leaflet)
+
+leaflet() |>
+  addTiles() |>
+  addMarkers(lng=6.91895, lat=50.9299) |>
+  addPopups(lng=6.91895, lat=50.9304,
+  popup="Zentrum für Lehrer*innenbildung (ZfL), Besuchsadresse: Immermannstraße 49, 50931 Köln")
+```
+
+- <https://quarto.org/docs/interactive/>
+- <https://quarto.org/docs/interactive/widgets/htmlwidgets.html>
+
+:::
+
+# Interaktivität mit H5P
+
+```{=html}
+<iframe src="https://zfl-lernen.de/wp-admin/admin-ajax.php?action=h5p_embed&id=1428" width="959" height="983" frameborder="0" allowfullscreen="allowfullscreen" title="Cat"></iframe><script src="https://zfl-lernen.de/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
+```
+
+```{}
+<iframe src="https://zfl-lernen.de/wp-admin/admin-ajax.php?action=h5p_embed&id=1428" width="959" height="983" frameborder="0" allowfullscreen="allowfullscreen" title="Cat"></iframe><script src="https://zfl-lernen.de/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
+```
